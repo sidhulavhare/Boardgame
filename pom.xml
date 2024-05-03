@@ -117,7 +117,7 @@
 	</build>
 	<distributionManagement>
     <repository>
-        <id>maven-releases/id>
+        <id>maven-releases</id>
         <name>My Repository</name>
         <url>http://43.204.211.177:8081/repository/maven-releases/</url>
     </repository>
