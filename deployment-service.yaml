@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: boardgame-deployment
+  name: mydeployment
 spec:
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: boardgame
-          image: adijaiswal/boardgame:latest # Image that will be used to containers in the cluster
+          image: sidhulavhare/boardgame:latest # Image that will be used to containers in the cluster
           imagePullPolicy: Always
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
@@ -25,7 +25,7 @@ spec:
 apiVersion: v1 # Kubernetes API version
 kind: Service # Kubernetes resource kind we are creating
 metadata: # Metadata of the resource kind we are creating
-  name: boardgame-ssvc
+  name: myservice
 spec:
   selector:
     app: boardgame
